@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  replicas: 3 # You can adjust the number of desired replicas as needed
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:latest # You can specify a different Nginx image or version here
+          image: nginx:1.24
           ports:
             - containerPort: 80
 
